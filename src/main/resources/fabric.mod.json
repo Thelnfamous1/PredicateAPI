@@ -13,7 +13,7 @@
     "sources": "https://github.com/Patbox/PredicateAPI"
   },
   "license": "LGPLv3",
-  "icon": "assets/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "depends": {
     "fabricloader": ">=0.13.4",

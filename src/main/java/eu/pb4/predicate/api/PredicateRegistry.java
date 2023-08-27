@@ -47,8 +47,4 @@ public final class PredicateRegistry {
         CODECS.put(identifier, (MapCodec<MinecraftPredicate>) predicateCodec);
         CODEC_IDS.put((MapCodec<MinecraftPredicate>) predicateCodec, identifier);
     }
-
-    static {
-        PredicatesInit.initialize();
-    }
 }

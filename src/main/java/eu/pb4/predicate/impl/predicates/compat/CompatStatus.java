@@ -2,8 +2,13 @@ package eu.pb4.predicate.impl.predicates.compat;
 
 import net.minecraftforge.fml.ModList;
 
-public interface CompatStatus {
-    boolean PLACEHOLDER_API = ModList.get().isLoaded("placeholder-api");
+public class CompatStatus {
 
-    boolean LUCKO_PERMISSION_API = ModList.get().isLoaded("fabric-permissions-api-v0");
+    public static boolean isPlaceholderApiLoaded() {
+        return ModList.get().isLoaded("placeholder_api");
+    }
+
+    public static boolean isLuckoPermissionApiLoaded() {
+        return ModList.get().isLoaded("permissions-api");
+    }
 }

@@ -170,6 +170,7 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -190,6 +191,9 @@ dependencies {
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
     // The group id is ignored when searching -- in this case, it is "blank"
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
+
+    implementation fg.deobf("com.github.Thelnfamous1:TextPlaceholderAPI:1.19.2-SNAPSHOT")
+    implementation fg.deobf("com.github.Thelnfamous1:PermissionsAPI:1.19.2-SNAPSHOT")
 
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html

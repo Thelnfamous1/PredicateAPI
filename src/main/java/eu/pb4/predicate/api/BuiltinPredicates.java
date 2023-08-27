@@ -71,21 +71,21 @@ public final class BuiltinPredicates {
 
     @Nullable
     public static MinecraftPredicate modPlaceholderApi(String placeholder, boolean raw) {
-        return CompatStatus.PLACEHOLDER_API ? new PlaceholderPredicate(placeholder, raw) : null;
+        return CompatStatus.isPlaceholderApiLoaded() ? new PlaceholderPredicate(placeholder, raw) : null;
     }
 
     @Nullable
     public static MinecraftPredicate modPlaceholderApi(String placeholder) {
-        return CompatStatus.PLACEHOLDER_API ? new PlaceholderPredicate(placeholder, false) : null;
+        return CompatStatus.isPlaceholderApiLoaded() ? new PlaceholderPredicate(placeholder, false) : null;
     }
 
     @Nullable
     public static MinecraftPredicate modPermissionApi(String permission, int alternativeOperatorLevel) {
-        return CompatStatus.LUCKO_PERMISSION_API ? new PermissionPredicate(permission, alternativeOperatorLevel) : null;
+        return CompatStatus.isLuckoPermissionApiLoaded() ? new PermissionPredicate(permission, alternativeOperatorLevel) : null;
     }
 
     @Nullable
     public static MinecraftPredicate modPermissionApi(String permission) {
-        return CompatStatus.LUCKO_PERMISSION_API ? new PermissionPredicate(permission, -1) : null;
+        return CompatStatus.isLuckoPermissionApiLoaded() ? new PermissionPredicate(permission, -1) : null;
     }
 }

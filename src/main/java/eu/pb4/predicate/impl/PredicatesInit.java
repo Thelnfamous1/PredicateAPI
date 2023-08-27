@@ -28,11 +28,11 @@ public class PredicatesInit {
         register(EntityPredicatePredicate.ID, EntityPredicatePredicate.CODEC);
 
 
-        if (CompatStatus.PLACEHOLDER_API) {
+        if (CompatStatus.isPlaceholderApiLoaded()) {
             register(PlaceholderPredicate.ID, PlaceholderPredicate.CODEC);
         }
 
-        if (CompatStatus.LUCKO_PERMISSION_API) {
+        if (CompatStatus.isLuckoPermissionApiLoaded()) {
             register(PermissionPredicate.ID, PermissionPredicate.CODEC);
             register(PermissionOptionPredicate.ID, PermissionOptionPredicate.CODEC);
         }
