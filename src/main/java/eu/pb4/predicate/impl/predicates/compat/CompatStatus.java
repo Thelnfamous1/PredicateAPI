@@ -9,6 +9,6 @@ public class CompatStatus {
     }
 
     public static boolean isLuckoPermissionApiLoaded() {
-        return ModList.get().isLoaded("permissions-api");
+        return ModList.get().isLoaded("permissions_api");
     }
 }
